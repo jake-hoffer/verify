@@ -7,7 +7,7 @@ As I am new to the world of TDD, I found I fatigued rather quickly of the enormo
 
 ## Usage
 
-Simply require verify.js at the top of your testing script. Each time you write a test, you will call `verify()` with the first argument being the test description, and the second argument being an anonymous function. The function chained to `verify()` will evaluate its return, output, and error and compare it to what is expected. These are the available functions for evaluation:
+Simply require and execute verify.js at the top of your testing script using `require('verify.js')()`. Each time you write a test, you will call `verify()` with the first argument being the test description, and the second argument being an anonymous function. The function chained to `verify()` will evaluate its return, output, and error and compare it to what is expected. These are the available functions for evaluation:
 
 - `returns()`: verify that the return value of the function is equal to the given value
 	```javascript
