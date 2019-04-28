@@ -43,7 +43,7 @@ function verify(desc, func) {
 	var desc = typeof desc === 'undefined' ? null : desc;
 	if (typeof desc === 'function' && typeof func === 'undefined') {
 		func = desc;
-		desc = "\x1b[36m" + func.toString().replace(/^.*\n[ \t]*/, '').replace(/[ \t]*\n.*$/, '').replace(/^.*?return +/, '').replace(/ *;.*$/, '') + "\x1b[0m";
+		desc = "\x1b[36m" + func.toString().replace(/^function[ \t\n]*\([^\)]*\)[ \t\n]*\{[ \t\n]*/, '').replace(/[ \t\n]*\}$/, '') + "\x1b[0m";
 	}
 
 	if (typeof func === 'function') {
