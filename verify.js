@@ -84,7 +84,7 @@ function verify(desc, func) {
 			console.log("\x1b[1m\x1b[31mFAIL\x1b[0m", ":", desc);
 			console.log("       this should " + shouldTxt, "\t", shouldVal);
 			instead = false;
-			if (RET) {
+			if (RET || RET === false) {
 				if (typeof RET === 'object' && RET !== null && Object.getPrototypeOf(RET).constructor && Object.getPrototypeOf(RET).constructor.name && !['Array', 'Object', 'Error', 'RegExp'].includes(Object.getPrototypeOf(RET).constructor.name)) {
 					RET = '(instance of) ' + Object.getPrototypeOf(RET).constructor.name;
 				}
